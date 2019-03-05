@@ -1,5 +1,5 @@
-hash: bc87f693c9bbedc3b60b2d0c2db6223979fd883e49a2bba69c571249ebca842a
-updated: 2018-11-05T12:22:58.205748271-08:00
+hash: c707f284ee33af40cf5e5298a11400f98a9b68757172fdaa77803ab1e6b3543d
+updated: 2019-03-01T18:44:19.922578-08:00
 imports:
 - name: github.com/beorn7/perks
   version: 3ac7bf7a47d159a033b107610db8a1b6575507a4
@@ -62,7 +62,7 @@ imports:
 - name: github.com/go-stack/stack
   version: 2fee6af1a9795aafbe0253a0cfbdf668e1fb8a9a
 - name: github.com/gogo/protobuf
-  version: 636bf0302bc95575d69441b25a2603156ffdddf1
+  version: ba06b47c162d49f2af050fb4c75bcbc86a159d5c
   subpackages:
   - gogoproto
   - jsonpb
@@ -99,6 +99,8 @@ imports:
   version: 53c1911da2b537f792e7cafcb446b05ffe33b996
 - name: github.com/gorilla/websocket
   version: 66b9c49e59c6c48f0ffce28c2d8b8a5678502c6d
+- name: github.com/gosuri/uitable
+  version: 36ee7e946282a3fb1cfecd476ddc9b35d8847e42
 - name: github.com/gregjones/httpcache
   version: 787624de3eb7bd915c329cba748687a3b22666a6
   subpackages:
@@ -197,11 +199,11 @@ imports:
 - name: github.com/spf13/pflag
   version: 583c0c0531f06d5278b7d917446061adc344b5cd
 - name: github.com/spf13/viper
-  version: 62edee319679b6ceaec16de03b966102d2dea709
+  version: d104d259b3380cb653bb793756823c3c41b37b53
 - name: github.com/stretchr/objx
   version: ef50b0de28773081167c97fc27cf29a0bf8b8c71
 - name: github.com/stretchr/testify
-  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
+  version: ffdc059bfe9ce6a4e144ba849dbedead332c6053
   subpackages:
   - assert
   - mock
@@ -378,22 +380,27 @@ imports:
   - googleapis/api/annotations
   - googleapis/rpc/status
 - name: google.golang.org/grpc
-  version: 2e463a05d100327ca47ac218281906921038fd95
+  version: 2fdaae294f38ed9a121193c51ec99fecd3b13eb7
   subpackages:
   - balancer
   - balancer/base
   - balancer/roundrobin
+  - binarylog/grpc_binarylog_v1
   - codes
   - connectivity
   - credentials
+  - credentials/internal
   - encoding
   - encoding/proto
   - grpclog
   - internal
   - internal/backoff
+  - internal/binarylog
   - internal/channelz
   - internal/envconfig
   - internal/grpcrand
+  - internal/grpcsync
+  - internal/syscall
   - internal/transport
   - keepalive
   - metadata
@@ -453,7 +460,7 @@ imports:
   - pkg/client/clientset/clientset/scheme
   - pkg/client/clientset/clientset/typed/apiextensions/v1beta1
 - name: k8s.io/apimachinery
-  version: f71dbbc36e126f5a371b85f6cca96bc8c57db2b6
+  version: 01f179d85dbce0f2e0e4351a92394b38694b7cae
   subpackages:
   - '...'
   - pkg/api/errors
@@ -563,7 +570,7 @@ imports:
   - util/integer
   - util/retry
 - name: k8s.io/code-generator
-  version: 3dcf91f64f638563e5106f21f50c31fa361c918d
+  version: b1289fc74931d4b6b04bd1a259acfc88a2cb0a66
 - name: k8s.io/gengo
   version: 4242d8e6c5dba56827bb7bcf14ad11cda38f3991
 - name: k8s.io/kube-openapi
@@ -575,7 +582,7 @@ imports:
   - pkg/util
   - pkg/util/proto
 - name: k8s.io/metrics
-  version: c6bb70553a8287cd6451211dd366fee12e088b95
+  version: 3954d62a524dad50e7c4bcf91a26eeef011040e2
   subpackages:
   - pkg/apis/metrics
   - pkg/apis/metrics/v1alpha1

@@ -53,12 +53,15 @@ func doKeyCreateCommand(session session.Session, cmd *cobra.Command, args []stri
 		return err
 	}
 
-	info, _, err := kmgr.CreateMnemonic(args[0], common.DefaultCodec, password, ktype)
+	info, seed, err := kmgr.CreateMnemonic(args[0], common.DefaultCodec, password, ktype)
 	if err != nil {
 		return err
 	}
 
 	fmt.Println(X(info.GetPubKey().Address()))
+	fmt.Printf("Key '%s' successfully created.", args[0])
+	fmt.Println("seed: ", seed)
+	fmt.Println("pass: ", password)
 
 	return nil
 }

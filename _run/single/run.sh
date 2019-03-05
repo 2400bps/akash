@@ -3,6 +3,8 @@
 
 source ./env.sh
 
+set -x
+
 do_init() {
   rm -rf "$DATA_ROOT"
   mkdir -p "$AKASH_DIR"
